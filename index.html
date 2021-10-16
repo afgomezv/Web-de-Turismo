@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip-co</title>
+
+  <!-- Link de libreria cdnjs -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+
+  <!-- Link de paginas de estilos -->
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="/css/media-queries.css">
+</head>
+
+<body>
+  <!-- HEADER-CABECERA -->
+  <!-- Section Header starts -->
+  <header>
+
+    <div class="logo-total">
+      <div>
+        <a href="#" class="cloud"><i class="fas fa-cloud-sun"></i></a>
+      </div>
+
+      <div>
+        <h1>Trip-co</h1>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <a href="#inicio">inicio</a>
+      <a href="#colombia">colombia</a>
+      <a href="#gastronomia">gastronomia</a>
+      <a href="#regiones">regiones</a>
+      <a href="#nosotros">nosotros</a>
+      <a href="ofertas">ofertas</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+      <i class="fas fa-user" id="user"></i>
+      <i class="fas fa-search" id="search-icon"></i>
+      <i class="fas fa-cart-shopping" id="shopping"></i>
+    </div>
+
+    <!-- Formulario: -->
+    <seccion class="formulario">
+
+      <div class="caja-formulario">
+        <!-- Caja contenedora del boton -->
+        <div class="caja-boton">
+          <div id="btn"></div>
+          <button type="button" onclick="login()" class="toggle-btn">Ingresar</button>
+          <button type="button" onclick="register()" class="toggle-btn">Registro</button>
+        </div>
+        <!-- Caja contenedora del login -->
+        <form action="" class="login" id="login">
+          <!-- Usuario -->
+          <div class="login-image">
+            <img src="https://i.ibb.co/8DLH0g3/undraw-profile-pic-ic5t.png" alt="undraw-profile-pic-ic5t">
+          </div>
+          <div class="grupo" id="grupo__correo">
+            <input type="text" class="input" name="correo" id="correo" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="correo" class="label">Correo</label>
+          </div>
+          <!-- Contraseña -->
+          <div class="grupo" id="grupo__contrasena">
+            <input type="password" class="input" name="contrasena" id="contrasena" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="contrasena" class="label">Contraseña</label>
+          </div>
+          <!-- Boton de ingresar -->
+          <button id="btn-registrar" class="label" type="submit">Ingresar</button>
+        </form>
+        <!-- Caja contenedora de registro -->
+        <form action="" class="form-registro" id="form-registro">
+          <div class="grupo">
+            <select name="tipo-documento" class="tipo-documento" id="tipo-documento" required><span
+                class="barra"></span>
+              <option value=""></option>
+              <option value="">Cédula de ciudadanía</option>
+              <option value="">Cédula de extranjería</option>
+              <option value="">Tarjeta de identidad</option>
+              <option value="">Pasaporte</option>
+              <option value="">NIT</option>
+            </select>
+            <label for="tipo-documento" class="label">Tipo de documento</label>
+          </div>
+          <!-- Numero  del documento -->
+          <div class="grupo" id="grupo__numero">
+            <input type="text" class="input" name="numero" id="numero" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="numero" class="label">Numero de documento</label>
+          </div>
+          <!-- Correo electronico -->
+          <div class="grupo" id="grupo__correo">
+            <input type="text" class="input" name="correo" id="correo" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="correo" class="label">Correo</label>
+          </div>
+          <!-- Nombre completo -->
+          <div class="grupo" id="grupo__nombre">
+            <input type="text" class="input" name="nombre" id="nombre" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="nombre" class="label">nombres completo</label>
+          </div>
+          <!-- Apellidos completos -->
+          <div class="grupo" id="grupo__apellido">
+            <input type="text" class="input" name="apellido" id="apellido" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="apellido" class="label">apellidos completo</label>
+          </div>
+          <!-- Contraseña -->
+          <div class="grupo" id="grupo__contrasena">
+            <input type="password" class="input" name="contrasena" id="contrasena" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="contrasena" class="label">Contraseña</label>
+          </div>
+          <!-- Contraseña-2 -->
+          <div class="grupo" id="grupo__contrasena2">
+            <input type="password" class="input" name="contrasena2" id="contrasena2" autocomplete="off" required><span
+              class="barra"></span>
+            <i class="icon-input fas fa-times-circle"></i>
+            <label for="contrasena2" class="label">Contraseña</label>
+          </div>
+          <!-- Mensaje Warning -->
+          <div class="mensaje-error">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Escribir formulario correctamente</p>
+          </div>
+          <!-- Boton de enviar -->
+          <button id="btn-registrar" type="submit">Registrar</button>
+        </form>
+      </div>
+    </seccion>
+
+    <form action="" class="search-form">
+      <input type="search" class="search-box" id="search-box" placeholder="search here...">
+      <label for="search-box" class="fas fa-search label"></label>
+    </form>
+
+  </header>
+  <!-- Section Header ends -->
+
+
+  <!-- HOME-CARRUSEL -->
+  <!-- Section home starts -->
+  <section class="home" id="home">
+
+    <div class="swiper home-slider">
+
+      <div class="swiper-wrapper wrapper">
+
+        <div class="swiper-slide slide">
+          <div class="image">
+            <img src="https://i.ibb.co/HrwqBQy/art.jpg" alt="art">
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="image">
+            <img src="https://i.ibb.co/ZKPjxwd/cartagena-3.jpg" alt="cartagena-3">
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="image">
+            <img src="https://i.ibb.co/DCK9VL2/guatape-min.jpg" alt="guatape-min">
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="image">
+            <img src="https://i.ibb.co/rQw4VT7/raquira-min.jpg" alt="raquira-min">
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="image">
+            <img src="https://i.ibb.co/NjVS3mb/salento-min.jpg" alt="salento-min">
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="/js/view.js"></script>
+</body>

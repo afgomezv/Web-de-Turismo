@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+:root {
+  --principal-color: #ff5733;
+  --secundary-color: #00ced1;
+  --black: #192a56;
+  --colorTextos: #49454567;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --background-transparent: rgb(255, 255, 255, 0.7);
+}
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+/* ---HEADER -- LOGO--- MENU--- ICONOS */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.8rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+header .logo-total {
+  display: flex;
+}
+
+.logo-total .cloud i {
+  color: var(--principal-color);
+  font-size: 3.5rem;
+  padding-right: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+header .navbar a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  color: var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  background: var(--principal-color);
+}
+
+header .icons i {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4rem;
+  line-height: 4rem;
+  width: 4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--black);
+  border-radius: 50%;
+  background: #eee;
+}
+
+header .icons i:hover {
+  color: #fff;
+  background: var(--principal-color);
+  transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+  display: none;
+}
+
+/*------------- FORMULARIO---------------- */
+
+.formulario {
+  position: absolute;
+  height: 550px;
+  background-color: var(--background-transparent);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem 1rem;
+  top: 65px;
+  right: 80px;
+  overflow: hidden;
+  display: none;
+  z-index: 1010;
+}
+
+.formulario.active {
+  display: block;
+}
+
+.caja-boton {
+  width: 23rem;
+  margin: 1.5rem auto;
+  position: relative;
+  border: thin solid var(--black);
+  border-radius: 3rem;
+}
+
+.caja-boton .toggle-btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+.caja-boton #btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background-color: var(--principal-color);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.login {
+  position: relative;
+  width: 28rem;
+  transition: 0.5s;
+}
+
+.form-registro {
+  top: 10px;
+  position: relative;
+  width: 28rem;
+  transition: 0.5s;
+}
+
+.form {
+  background: #fff;
+  padding: 1rem 1rem;
+  box-shadow: 0 0 0.6rem 0 rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  width: 30rem;
+}
+
+#login {
+  left: 0;
+}
+
+#form-registro {
+  top: -42rem;
+  left: 30rem;
+}
+
+.login-image img {
+  width: 25rem;
+  margin-left: 1.8rem;
+  border-radius: 50%;
+}
+
+form .grupo {
+  position: relative;
+  margin: 2rem;
+}
+
+.input,
+select {
+  background: none;
+  color: #bb2929;
+  font-size: 18px;
+  padding: 0.8rem 1rem 0.6rem 0.5rem;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 0.1rem solid var(--black);
+}
+
+.input:focus,
+select:focus {
+  outline: none;
+  color: #5e5d5d;
+}
+
+.grupo .label {
+  color: var(--black);
+  font-size: 1.6rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.8rem;
+  transition: 0.5s ease-in-out all;
+}
+
+.input:focus ~ label,
+.tipo-documento:focus ~ label,
+.input:valid ~ label,
+.tipo-documento:valid ~ label {
+  top: -1.4rem;
+  font-size: 1.2rem;
+  color: #2196f3;
+}
+
+.icon-input {
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  z-index: 100;
+  font-size: 1.6rem;
+  opacity: 0;
+}
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barra::before {
+  content: "";
+  height: 0.2rem;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  transition: 0.3s ease width;
+  left: 0;
+}
+
+.input:focus ~ .barra::before {
+  width: 100%;
+}
+
+.mensaje-error {
+  height: 35px;
+  font-size: 14px;
+  line-height: 10px;
+  background: #f66060;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: none;
+}
+
+#btn-registrar {
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  border: none;
+  border-radius: 0.5rem;
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  color: #fff;
+  height: 4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ---BOTON-BUSCAR-- */
+
+header .search-form {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  width: 50rem;
+  height: 5rem;
+  background-color: var(--background-transparent);
+  border-radius: 0.7rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+header .search-form.active {
+  right: 2rem;
+}
+
+header .search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.8rem;
+  color: var(--black);
+  padding: 0 1.5rem;
+}
+
+header .search-form label {
+  font-size: 2.2rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+header .search-form label:hover {
+  color: var(--principal-color);
+}
+
+.grupo-correcto .icon-input {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.grupo-incorrecto .icon-input {
+  color: #bb2929;
+  opacity: 1;
+}
+
+/* --CARRUSEL-- */
+
+.home:nth-child(even) {
+  background-color: #eee;
+}
+
+.home .home-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+}
+
+.home .home-slider .slide {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.home .home-slider .image {
+  width: 100vw;
+}
+
+.home .home-slider .image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--principal-color);
+}
