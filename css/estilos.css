@@ -195,6 +195,7 @@ select {
   width: 100%;
   border: none;
   border-bottom: 0.1rem solid var(--black);
+  text-transform: none;
 }
 
 .input:focus,
@@ -261,7 +262,8 @@ select:focus {
   display: none;
 }
 
-#btn-registrar {
+#btn-registrar,
+#btn-ingresar {
   background: linear-gradient(to right, #fc4a1a, #f7b733);
   border: none;
   border-radius: 0.5rem;

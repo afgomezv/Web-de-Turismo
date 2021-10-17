@@ -55,33 +55,34 @@
         <!-- Caja contenedora del boton -->
         <div class="caja-boton">
           <div id="btn"></div>
-          <button type="button" onclick="login()" class="toggle-btn">Ingresar</button>
-          <button type="button" onclick="register()" class="toggle-btn">Registro</button>
+          <button type="button" id="inicio-seccion" class="toggle-btn">Ingresar</button>
+          <button type="button" id="registro" class="toggle-btn">Registro</button>
         </div>
         <!-- Caja contenedora del login -->
-        <form action="" class="login" id="login">
-          <!-- Usuario -->
+        <form action="https://formsubmit.co/afgomezvonline@gmail.com" class="login" id="login" method="post">
           <div class="login-image">
             <img src="https://i.ibb.co/8DLH0g3/undraw-profile-pic-ic5t.png" alt="undraw-profile-pic-ic5t">
           </div>
-          <div class="grupo" id="grupo__correo">
-            <input type="text" class="input" name="correo" id="correo" autocomplete="off" required><span
+          <!-- Usuario-Correo -->
+          <div class="grupo" id="grupo__icorreo">
+            <input type="text" class="input" name="correo-inicio" id="correo-inicio" autocomplete="off" required><span
               class="barra"></span>
             <i class="icon-input fas fa-times-circle"></i>
-            <label for="correo" class="label">Correo</label>
+            <label for="correo-inicio" class="label">Correo</label>
           </div>
           <!-- Contraseña -->
-          <div class="grupo" id="grupo__contrasena">
-            <input type="password" class="input" name="contrasena" id="contrasena" autocomplete="off" required><span
-              class="barra"></span>
+          <div class="grupo" id="grupo__icontrasena">
+            <input type="password" class="input" name="contrasena-inicio" id="contrasena-inicio" autocomplete="off"
+              required><span class="barra"></span>
             <i class="icon-input fas fa-times-circle"></i>
-            <label for="contrasena" class="label">Contraseña</label>
+            <label for="contrasena-inicio" class="label">Contraseña</label>
           </div>
           <!-- Boton de ingresar -->
-          <button id="btn-registrar" class="label" type="submit">Ingresar</button>
+          <button id="btn-ingresar" class="label" type="submit">Ingresar</button>
         </form>
         <!-- Caja contenedora de registro -->
-        <form action="" class="form-registro" id="form-registro">
+        <form action="https://formsubmit.co/afgomezvonline@gmail.com" class="form-registro" id="form-registro"
+          method="post">
           <div class="grupo">
             <select name="tipo-documento" class="tipo-documento" id="tipo-documento" required><span
                 class="barra"></span>
