@@ -334,30 +334,143 @@ header .search-form label:hover {
 }
 
 .home .home-slider {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 900;
+}
+
+.home .wrapper {
+  display: flex;
+  z-index: 0;
 }
 
 .home .home-slider .slide {
-  display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-}
-
-.home .home-slider .image {
-  width: 100vw;
 }
 
 .home .home-slider .image img {
   width: 100%;
   height: 100vh;
+  z-index: 900;
   object-fit: fill;
 }
 
 .swiper-pagination-bullet-active {
   background: var(--principal-color);
+}
+
+/* COLOMBIA */
+
+.contenedor-padre {
+  width: 100%;
+  margin: 2.5rem;
+}
+
+.titulo {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.titulo span {
+  font-size: 3rem;
+  background: var(--principal-color);
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.contenedor {
+  display: flex;
+  padding: 3rem 2rem;
+  background: #fff;
+  outline-offset: -1rem;
+  text-align: center;
+}
+
+.contenedor .imagen-colombia img {
+  width: 45rem;
+  height: auto;
+}
+
+.contenedor .texto-1 {
+  padding: 1.5rem 2rem;
+  background: #fff;
+  outline: var(--outline);
+  outline-offset: -1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.contenedor .texto-1 h3 {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  text-transform: none;
+}
+
+.contenedor .texto-1 article {
+  padding: 1.5rem 2.5rem;
+}
+
+.contenedor .texto-1 p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-transform: none;
+  color: var(--light-color);
+}
+
+ol {
+  margin-left: 2.5rem;
+}
+
+li {
+  text-align: left;
+  color: var(--light-color);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.imagen-colombia-gastronomia img {
+  width: 60rem;
+}
+
+/* SERVICIOS */
+
+.servicios .caja-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.servicios .caja-contenedor .caja {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.servicios .caja-contenedor .caja i {
+  padding: 1rem;
+  font-size: 5rem;
+  color: var(--principal-color);
+}
+
+.servicios .caja-contenedor .caja h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.servicios .caja-contenedor .caja p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  text-transform: none;
+}
+
+.servicios .caja-contenedor .caja:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }

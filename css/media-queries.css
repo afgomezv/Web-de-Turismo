@@ -1,4 +1,14 @@
 @media (max-width: 990px) {
+  .home .home-slider {
+    height: auto;
+  }
+  .home .home-slider .image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 990px) {
   .logo-total .cloud i {
     font-size: 2.3rem;
   }
@@ -45,5 +55,21 @@
     font-size: 2rem;
     margin: 2rem 2.5rem;
     display: block;
+  }
+
+  .home .home-slider .image img {
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    object-fit: fill;
+  }
+
+  .contenedor {
+    display: block;
+  }
+
+  .contenedor .texto-1 p,
+  li {
+    font-size: 1.2rem;
   }
 }
