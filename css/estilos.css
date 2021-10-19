@@ -389,6 +389,7 @@ header .search-form label:hover {
   background: #fff;
   outline-offset: -1rem;
   text-align: center;
+  box-shadow: var(--box-shadow);
 }
 
 .contenedor .imagen-colombia img {
@@ -402,7 +403,6 @@ header .search-form label:hover {
   outline: var(--outline);
   outline-offset: -1rem;
   text-align: center;
-  box-shadow: var(--box-shadow);
 }
 
 .contenedor .texto-1 h3 {
@@ -435,7 +435,15 @@ li {
 }
 
 .imagen-colombia-gastronomia img {
-  width: 60rem;
+  width: 50rem;
+  padding-right: 2.5rem;
+  padding-top: 3rem;
+}
+
+.imagen-colombia-naturaleza img {
+  width: 50rem;
+  padding-right: 2.5rem;
+  padding-top: 3rem;
 }
 
 /* SERVICIOS */
@@ -473,4 +481,201 @@ li {
 
 .servicios .caja-contenedor .caja:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+/* --PAQUETES DE VIAJE-- */
+
+.paquetes .caja-contenedor {
+  display: flex;
+  flex: wrap;
+  gap: 2rem;
+}
+
+.paquetes .caja-contenedor .caja {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0.1 2rem rgba(0, 0, 0, 0.3);
+}
+
+.paquetes .caja-contenedor .caja img {
+  height: 25rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.paquetes .caja-contenedor .caja .contenido {
+  padding: 2rem;
+}
+
+.paquetes .caja-contenedor .caja .contenido h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.paquetes .caja-contenedor .caja .contenido h3 i {
+  font-size: 2rem;
+  padding-right: 0.5rem;
+  color: var(--principal-color);
+}
+
+.paquetes .caja-contenedor .caja .contenido .stars {
+  padding: 1rem 0 0 0;
+}
+
+.paquetes .caja-contenedor .caja .contenido .stars i {
+  font-size: 1.7rem;
+  color: #f7b733;
+}
+
+.paquetes .caja-contenedor .caja .contenido .precio {
+  font-size: 2rem;
+  color: var(--light-color);
+  padding: 1rem;
+}
+
+.paquetes .caja-contenedor .caja .contenido .precio span {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  text-decoration: line-through;
+}
+
+.paquetes .caja-contenedor .caja .contenido .iconos-tarjeta {
+  font-size: 1.5rem;
+}
+
+.paquetes .caja-contenedor .caja .contenido .iconos-tarjeta h4 {
+  color: var(--light-color);
+  padding: 0.2rem;
+}
+
+.paquetes .caja-contenedor .caja .contenido .iconos-tarjeta .yellow {
+  color: #f7b733;
+  padding-right: 0.5rem;
+}
+
+.paquetes .caja-contenedor .caja .contenido .iconos-tarjeta .blue {
+  color: #2196f3;
+  padding-right: 0.5rem;
+}
+
+.paquetes .caja-contenedor .caja .contenido .iconos-tarjeta .black {
+  color: #192a56;
+  padding-right: 0.5rem;
+}
+.paquetes .caja-contenedor .caja .contenido .iconos-tarjeta h5 {
+  color: var(--light-color);
+}
+
+.btn-shop {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #fff;
+  color: var(--light-color);
+  padding: 0.8rem 3rem;
+  border: 0.2rem solid var(--light-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: none;
+}
+
+.btn-shop:hover {
+  background: var(--principal-color);
+  color: #fff;
+  border: none;
+}
+
+/* --PIE PAGINA-- */
+
+.pie-pagina {
+  width: 100%;
+  background-color: var(--principal-color);
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 4.5rem 0;
+}
+
+.pie-pagina .grupo-1 .caja h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.pie-pagina .grupo-1 .caja p {
+  color: #efefef;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pie-pagina .grupo-1 .social-menu ul {
+  display: flex;
+}
+
+.pie-pagina .grupo-1 .social-menu ul li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+.pie-pagina .grupo-1 .social-menu .fa {
+  font-size: 3rem;
+  padding: 1rem;
+  line-height: 3rem;
+  color: #000000;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.pie-pagina .grupo-1 .social-menu .fa:hover {
+  color: #ffffff;
+}
+
+.pie-pagina .grupo-1 .social-menu a {
+  position: relative;
+  display: block;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  transform: translate(0, 0px);
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pie-pagina .grupo-1 .social-menu a:hover {
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+.pie-pagina .grupo-1 .social-menu ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+
+.pie-pagina .grupo-1 .social-menu ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+
+.pie-pagina .grupo-1 .social-menu ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+.pie-pagina .grupo-1 .social-menu ul li:nth-child(4) a:hover {
+  background-color: #0aa545;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 1.5rem;
 }

@@ -28,6 +28,7 @@ let searchForm = document.querySelector('.search-form');
 document.querySelector('#search-icon').onclick = () =>{
     searchForm.classList.toggle('active');
     formulario.classList.remove('active');
+    menuBars.classList.remove('active');
   
 }
 
@@ -36,6 +37,7 @@ let formulario = document.querySelector('.formulario');
 document.querySelector('#user').onclick = () =>{
     formulario.classList.toggle('active');
     searchForm.classList.remove('active');
+    menuBars.classList.remove('active');
     
 }
 
