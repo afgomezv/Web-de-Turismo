@@ -73,10 +73,36 @@
     font-size: 1.2rem;
   }
 
+  .paquetes .caja-contenedor {
+    margin: 0 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .servicios .caja-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
   .pie-pagina .grupo-1 {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
     padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .servicios .caja-contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .paquetes .caja-contenedor {
+    margin: 0 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
   }
 }

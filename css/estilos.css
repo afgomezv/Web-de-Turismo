@@ -449,8 +449,8 @@ li {
 /* SERVICIOS */
 
 .servicios .caja-contenedor {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -486,12 +486,14 @@ li {
 /* --PAQUETES DE VIAJE-- */
 
 .paquetes .caja-contenedor {
-  display: flex;
-  flex: wrap;
+  display: grid;
+  margin: 0 4.5rem;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .paquetes .caja-contenedor .caja {
+  align-items: center;
   flex: 1 1 30rem;
   border-radius: 0.5rem;
   overflow: hidden;
